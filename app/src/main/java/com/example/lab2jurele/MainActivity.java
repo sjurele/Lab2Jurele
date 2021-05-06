@@ -8,20 +8,22 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
-    Spinner ddList;
+    Spinner smbList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.ddList = (Spinner) findViewById(R.id.smbList);
+        this.smbList = findViewById(R.id.smbList);
 
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this, R.array.select_array, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        this.ddList.setAdapter(arrayAdapter);
+        this.smbList.setAdapter(arrayAdapter);
     }
 
     public void btnCalculateOnClick(View view) {
@@ -30,13 +32,17 @@ public class MainActivity extends AppCompatActivity {
         String userInputText = edInput.getText().toString();
 
 
-        String selection = this.ddList.getSelectedItem().toString();
+        String selection = this.smbList.getSelectedItem().toString();
         int resId = R.string.char_selection;
 
 
         String charSelectionOption = getResources().getString(R.string.char_selection);
         String numberSelectionOption = getResources().getString(R.string.numbers_selection);
         String wordSelectionOption = getResources().getString(R.string.words_selection);
+
+        if(edInput.getText().toString().trim().isEmpty()) {
+            Toast.makeText(this, "Field is empty, please enter any phrase", Toast.LENGTH_SHORT).show();
+        }
 
         if(selection.equalsIgnoreCase(charSelectionOption)){
             int count = calculator_jurele.getCharsCount(userInputText);

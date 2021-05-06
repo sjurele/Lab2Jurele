@@ -16,8 +16,8 @@ public class calculator_jurele {
     }
 
     public static int getWordsCount(String userInputText){
-        if (userInputText == null)
+        if (userInputText.trim().isEmpty())
             return 0;
-        return userInputText.trim().split("\\s+").length;
+        else return userInputText.trim().split("\\s+").length;
     }
 }

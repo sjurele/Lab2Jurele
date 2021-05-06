@@ -6,10 +6,6 @@
     <string name="list_head">Choose type</string>
     <string name="txt_head">Enter the text</string>
     <string name="calc_head">Calculation result:</string>
-
-
-
-
     <string name="intro_txt">Calculator will count how many words, numbers or characters are in the text. Choose the type, enter the text and press "Calculate".</string>
     <string-array name="select_array">
         <item>Words</item>
