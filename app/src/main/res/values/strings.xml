@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab2Jurele</string>
+    <string name="enter_txt">Enter phrase</string>
+    <string name="calculate_btn_caption">Calculate</string>
+    <string name="header_txt">Calculator</string>
+    <string name="intro_txt">Calculator will count how many words, numbers or characters are in the text. Choose the type, enter the text and press "Calculate".</string>
+    <string-array name="select_array">
+        <item>Words</item>
+        <item>Numbers</item>
+        <item>Chars</item>
+    </string-array>
+    <string name="char_selection">Chars</string>
+    <string name="numbers_selection">Numbers</string>
+    <string name="words_selection">Words</string>
+</resources>
