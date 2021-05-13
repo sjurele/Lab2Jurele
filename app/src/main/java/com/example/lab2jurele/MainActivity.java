@@ -45,16 +45,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(selection.equalsIgnoreCase(charSelectionOption)){
-            int count = calculator.getCharsCount(userInputText);
+            int count = Calculator.getCharsCount(userInputText);
             tvResult.setText(String.valueOf(count));
         }
 
         if(selection.equalsIgnoreCase(numberSelectionOption)){
-            int count = calculator.getNumbersCount(userInputText);
+            int count = Calculator.getNumbersCount(userInputText);
             tvResult.setText(String.valueOf(count));
         }
         if(selection.equalsIgnoreCase(wordSelectionOption)){
-            int count = calculator.getWordsCount(userInputText);
+            int count = Calculator.getWordsCount(userInputText);
             tvResult.setText(String.valueOf(count));
         }
     }
