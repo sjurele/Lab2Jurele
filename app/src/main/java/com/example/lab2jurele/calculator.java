@@ -1,6 +1,6 @@
 package com.example.lab2jurele;
 
-public class calculator_jurele {
+public class calculator {
     public static int getCharsCount(String inputText){
         return inputText.length();
     }
